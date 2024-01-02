@@ -1,4 +1,6 @@
-const baseURL = 'https://zqb.un-it.cn' + '/api'
+const baseURL = 'http://localhost:5210' + '/api'
+// const baseURL = 'https://avatarcraft.wuyupei.top'  + '/api'
+
 module.exports = (vm) => {
     uni.$u.http.setConfig((config) => {
         config.baseURL = baseURL

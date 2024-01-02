@@ -13,7 +13,7 @@ const store = new Vuex.Store({
 	// 全局state
     state () {
       return {
-        userInfo:uni.getStorageSync('userInfo') || {},
+        userInfo:uni.getStorageSync('userInfo') || null,
 	    token:uni.getStorageSync('token') || ''
       }
     },

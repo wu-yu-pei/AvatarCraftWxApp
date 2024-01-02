@@ -12,21 +12,7 @@
                 "navigationStyle" : "custom"
             }
             
-        },
-		{
-            "path" : "pages/serviceCircle/serviceCircle",
-            "style" : {
-                "navigationStyle" : "custom"
-            }
-            
-        },
-		{
-		    "path" : "pages/friendCircle/friendCircle",
-		    "style" : {
-		        "navigationStyle" : "custom"
-		    }
-		    
-		}
+        }
     ],
 	"subPackages": [
 		{
@@ -66,21 +52,9 @@
 		"list": [
 			{
 				"pagePath": "pages/index/index",
-				"text": "首页",
+				"text": "广场",
 				"iconPath": "static/image/tabbar/home.png",
 				"selectedIconPath": "static/image/tabbar/home_adtive.png"
-			},
-			{
-				"pagePath": "pages/friendCircle/friendCircle",
-				"text": "企友圈",
-				"iconPath": "static/image/tabbar/serviceCircle.png",
-				"selectedIconPath": "static/image/tabbar/serviceCircle_active.png"
-			},
-			{
-				"pagePath": "pages/serviceCircle/serviceCircle",
-				"text": "服务圈",
-				"iconPath": "static/image/tabbar/serviceCircle.png",
-				"selectedIconPath": "static/image/tabbar/serviceCircle_active.png"
 			},
 			{
 				"pagePath": "pages/mine/mine",

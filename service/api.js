@@ -1,3 +1,3 @@
 export default {
-	getWxKey:params => uni.$u.http.get('mapp/wxLogin', {params}, {noNeedLogin:1})
+	login:data => uni.$u.http.post('user/login', data)
 }
