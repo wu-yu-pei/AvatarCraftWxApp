@@ -1,15 +1,31 @@
 <template>
 	<view class="page">
 		<BaseNavigation name="我的"></BaseNavigation>
-		<view class="top">
-			<view class="top-av">
-				<u-avatar :src="userInfo.avatarUrl" size="50" shape="square"></u-avatar>
+		<view class="user">
+			
+			<view class="user-avatar">
+				<u-avatar :src="userInfo.avatarUrl" size="130rpx" shape="square"></u-avatar>
 			</view>
-			<view class="top-name" v-if="userInfo">
-				{{userInfo.nickName}}
+			<view class="user-info" v-if="userInfo">
+				<view class="user-info-name">
+					<span>{{userInfo.nickName}}</span>
+				</view>
+				<view class="user-info-phone">
+					<span>18338323927</span>
+				</view>
 			</view>
-			<view class="top-button" v-else>
-				<button @click="getUserInfoAndLogin">登陆</button>
+			
+			<view class="user-info none" v-else>
+				<view class="user-info-name none">
+					用户名:<span> --- </span>
+				</view>
+				<view class="user-info-phone none">
+					手机号:<span> --- </span>
+				</view>
+			</view>
+			
+			<view class="user-cilck" @click="getUserInfoAndLogin" v-if="!userInfo">
+				点击登陆<u-icon name="arrow-right" color="#ccc" size="28"></u-icon>
 			</view>
 		</view>
 	</view>
@@ -60,29 +76,51 @@
 	
 	.page {
 		background-color: #fff;
+		padding: 20rpx;
+	}
+	.user {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		height: 130rpx;
 	}
 	
-	.top-av {
-		display: flex;
-		padding: 20rpx 0;
-		justify-content: center;
-		align-items: center;
+	.user-avatar {
+		
 	}
 	
-	.top-name {
+	.user-info {
 		display: flex;
-		justify-content: center;
-		align-items: center;
-	}
-	.top-button {
-		button {
-			width: 200rpx;
-			outline: none;
-			border: none;
-			background-color: transparent;
-			background-color: #fff;
-			box-shadow: none;
+		flex-direction: column;
+		justify-content: space-around;
+		flex: 1;
+		margin-left: 20rpx;
+		&.none {
+			gap: 20rpx 0;
 		}
+		&-name {
+			font-size: 60rpx;
+			font-weight: bold;
+		}
+		&-phone {
+			
+			span {
+				color: #ccc;
+			}
+		}
+	}
+	
+	.user-cilck {
+		color: #ccc;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	
+	.none {
+		font-size: 30rpx;
+		font-weight: normal;
+		color: #ccc !important;
 	}
 </style>
 
