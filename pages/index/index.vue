@@ -1,7 +1,9 @@
 <template>
 	<view class="page">
 		<BaseNavigation>
-			<template slot="left">首页</template>
+			<template slot="left">
+				<u-avatar src="/static/image/use/logo.jpg" size="40"></u-avatar>
+			</template>
 		</BaseNavigation>
 	</view>
 </template>
@@ -16,12 +18,18 @@
 
 		data() {
 			return {
-				user:{}
 			}
+		},
+		
+		created() {
+
 		},
 
 		onLoad() {
 
+		},
+		onPageScroll(e) {
+			
 		},
 
 		computed:{
@@ -53,4 +61,8 @@
     /deep/ .u-navbar .u-navbar__content {
     	border-bottom: 1rpx solid #ccc;
     }
+	
+	.content {
+		height: 9999rpx;
+	}
 </style>
