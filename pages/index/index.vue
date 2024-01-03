@@ -37,20 +37,7 @@
 		},
 
 		methods:{
-			getPhoneNumber(e) {
-				const phoneCode = e.detail.code
-				wx.login().then(res => {
-					const { code:loginCode } = res
-					uni.$api.login({ phoneCode, loginCode })
-				})
-			},
-			getUserInfo() {
-				wx.getUserProfile({
-					desc:"获取你的微信昵称"
-				}).then(res => {
-					this.user = res.userInfo
-				})
-			}
+			
 		}
 	}
 </script>
